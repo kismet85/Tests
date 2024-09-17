@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/kismet85/TimeCalculator.git'
+                git 'https://github.com/kismet85/Tests.git'
             }
         }
 
