@@ -36,10 +36,9 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
-                    <useModulePath>false</useModulePath> <!-- This is required to run JUnit 5 with Java 17 -->
+                    <useModulePath>false</useModulePath> <!-- Required to run JUnit 5 with Java 17 -->
                 </configuration>
             </plugin>
-
 
             <!-- JaCoCo Plugin for Code Coverage -->
             <plugin>
@@ -55,7 +54,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>verify</phase> <!-- Use "verify" phase to generate reports after tests -->
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -92,6 +91,20 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Jar Plugin for Manifest -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.ismet.TemperatureConverter</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
