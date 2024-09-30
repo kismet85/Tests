@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS_ID = 'kismet85'
+        DOCKERHUB_CREDENTIALS_ID = 'docker'
         DOCKERHUB_REPO = 'kismet85/Tests'
         DOCKER_IMAGE_TAG = 'latest'
     }
