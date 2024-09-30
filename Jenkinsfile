@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS_ID = 'docker'
-        DOCKERHUB_REPO = 'kismet85/Tests'
+        DOCKERHUB_REPO = 'kismet85/tests'
         DOCKER_IMAGE_TAG = 'latest'
     }
     stages {
